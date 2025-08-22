@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: textSummarizer
+Version: 0.0.0
+Summary: A small python package for Text Summarizer NLP app
+Home-page: https://github.com/entbappy/Text-Summarizer-Project
+Author: entbappy
+Author-email: entbappy73@gmail.com
+Project-URL: Bug Tracker, https://github.com/entbappy/Text-Summarizer-Project/issues
+
+# NLP-Text-Summarizer
+A Text Summarizer built using NLP concepts and techniques. 
