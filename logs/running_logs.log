@@ -1,1 +1,5 @@
 [2025-08-23 11:55:33,446: INFO: main: This is my new NLP project]
+[2025-08-23 22:15:15,497: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-23 22:15:15,499: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-23 22:27:35,605: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-23 22:27:35,606: INFO: common: yaml file: params.yaml loaded successfully]
