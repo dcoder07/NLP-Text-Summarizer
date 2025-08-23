@@ -3,3 +3,107 @@
 [2025-08-23 22:15:15,499: INFO: common: yaml file: params.yaml loaded successfully]
 [2025-08-23 22:27:35,605: INFO: common: yaml file: config\config.yaml loaded successfully]
 [2025-08-23 22:27:35,606: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-23 22:53:48,262: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-23 22:53:48,264: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-23 22:53:48,266: INFO: common: created directory at: artifacts]
+[2025-08-23 22:53:48,269: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-23 22:56:14,637: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-23 22:56:14,640: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-23 22:56:14,641: INFO: common: created directory at: artifacts]
+[2025-08-23 22:56:14,642: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-23 22:56:14,644: INFO: 272366779: File already exists of size: ~ 1536 KB]
+[2025-08-23 22:56:39,995: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-23 22:56:39,997: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-23 22:56:39,998: INFO: common: created directory at: artifacts]
+[2025-08-23 22:56:39,999: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-23 22:56:40,000: INFO: 272366779: File already exists of size: ~ 1536 KB]
+[2025-08-23 22:56:49,378: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-23 22:56:49,380: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-23 22:56:49,382: INFO: common: created directory at: artifacts]
+[2025-08-23 22:56:49,383: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-23 22:56:49,384: INFO: 272366779: File already exists of size: ~ 1536 KB]
+[2025-08-23 22:56:53,163: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-23 22:56:53,166: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-23 22:56:53,168: INFO: common: created directory at: artifacts]
+[2025-08-23 22:56:53,169: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-23 22:56:53,171: INFO: 272366779: File already exists of size: ~ 1536 KB]
+[2025-08-23 22:57:15,007: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-23 22:57:15,010: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-23 22:57:15,011: INFO: common: created directory at: artifacts]
+[2025-08-23 22:57:15,012: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-23 22:57:15,013: INFO: 272366779: File already exists of size: ~ 1536 KB]
+[2025-08-23 22:57:23,022: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-23 22:57:23,025: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-23 22:57:23,026: INFO: common: created directory at: artifacts]
+[2025-08-23 22:57:23,027: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-23 22:57:23,029: INFO: 272366779: File already exists of size: ~ 1536 KB]
+[2025-08-23 22:59:20,058: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-23 22:59:20,060: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-23 22:59:20,061: INFO: common: created directory at: artifacts]
+[2025-08-23 22:59:20,062: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-23 22:59:20,063: INFO: 272366779: File already exists of size: ~ 1536 KB]
+[2025-08-23 22:59:24,841: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-23 22:59:24,843: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-23 22:59:24,844: INFO: common: created directory at: artifacts]
+[2025-08-23 22:59:24,845: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-23 22:59:24,846: INFO: 272366779: File already exists of size: ~ 1536 KB]
+[2025-08-23 22:59:42,837: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-23 22:59:42,839: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-23 22:59:42,840: INFO: common: created directory at: artifacts]
+[2025-08-23 22:59:42,842: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-23 22:59:42,843: INFO: 272366779: File already exists of size: ~ 1536 KB]
+[2025-08-23 23:00:05,662: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-23 23:00:05,664: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-23 23:00:05,665: INFO: common: created directory at: artifacts]
+[2025-08-23 23:00:05,666: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-23 23:00:05,667: INFO: 272366779: File already exists of size: ~ 1536 KB]
+[2025-08-23 23:00:14,315: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-23 23:00:14,318: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-23 23:00:14,319: INFO: common: created directory at: artifacts]
+[2025-08-23 23:00:14,321: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-23 23:00:14,322: INFO: 272366779: File already exists of size: ~ 1536 KB]
+[2025-08-23 23:00:33,372: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-23 23:00:33,374: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-23 23:00:33,376: INFO: common: created directory at: artifacts]
+[2025-08-23 23:00:33,377: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-23 23:00:50,727: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-23 23:00:50,730: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-23 23:00:50,731: INFO: common: created directory at: artifacts]
+[2025-08-23 23:00:50,733: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-23 23:02:01,059: INFO: 272366779: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 7903594
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "dbc016a060da18070593b83afff580c9b300f0b6ea4147a7988433e04df246ca"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 779A:E07A7:FF98C:29BA1A:68A9F92D
+Accept-Ranges: bytes
+Date: Sat, 23 Aug 2025 17:30:56 GMT
+Via: 1.1 varnish
+X-Served-By: cache-ccu830028-CCU
+X-Cache: HIT
+X-Cache-Hits: 1
+X-Timer: S1755970257.715744,VS0,VE8
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 16ffa44dd45e2a46bc40b8e79873a1c45dd8e9ab
+Expires: Sat, 23 Aug 2025 17:35:56 GMT
+Source-Age: 17
+
+]
+[2025-08-24 00:03:02,533: INFO: main: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-08-24 00:03:02,535: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 00:03:02,537: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 00:03:02,538: INFO: common: created directory at: artifacts]
+[2025-08-24 00:03:02,539: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-24 00:05:13,603: INFO: main: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-08-24 00:05:13,605: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 00:05:13,607: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 00:05:13,608: INFO: common: created directory at: artifacts]
+[2025-08-24 00:05:13,609: INFO: common: created directory at: artifacts/data_ingestion]
