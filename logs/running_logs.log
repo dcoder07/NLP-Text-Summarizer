@@ -653,3 +653,701 @@ x==========x]
 [2025-08-24 20:27:18,468: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
 
 x==========x]
+[2025-08-24 20:48:14,708: INFO: main: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-08-24 20:48:14,721: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 20:48:14,729: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 20:48:14,730: INFO: common: created directory at: artifacts]
+[2025-08-24 20:48:14,730: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-24 20:48:14,730: INFO: data_ingestion: File already exists of size: ~ 7718 KB]
+[2025-08-24 20:48:14,854: INFO: main: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-08-24 20:48:14,854: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-08-24 20:48:14,857: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 20:48:14,859: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 20:48:14,859: INFO: common: created directory at: artifacts]
+[2025-08-24 20:48:14,860: INFO: common: created directory at: artifacts/data_validation]
+[2025-08-24 20:48:14,862: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-08-24 20:48:14,862: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-08-24 20:48:14,865: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 20:48:14,867: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 20:48:14,868: INFO: common: created directory at: artifacts]
+[2025-08-24 20:48:14,869: INFO: common: created directory at: artifacts/data_transformation]
+[2025-08-24 20:48:20,971: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-08-24 20:48:20,971: INFO: main: *******************]
+[2025-08-24 20:48:20,972: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-08-24 20:48:20,975: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 20:48:20,977: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 20:48:20,977: INFO: common: created directory at: artifacts]
+[2025-08-24 20:48:20,978: INFO: common: created directory at: artifacts/model_trainer]
+[2025-08-24 20:48:28,714: WARNING: file_download: Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`]
+[2025-08-24 20:50:22,310: ERROR: main: ("Connection broken: ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)", ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))]
+Traceback (most recent call last):
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\urllib3\response.py", line 779, in _error_catcher
+    yield
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\urllib3\response.py", line 904, in _raw_read
+    data = self._fp_read(amt, read1=read1) if not fp_closed else b""
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\urllib3\response.py", line 887, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+           ~~~~~~~~~~~~~^^^^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\http\client.py", line 479, in read
+    s = self.fp.read(amt)
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\ssl.py", line 1304, in recv_into
+    return self.read(nbytes, buffer)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\ssl.py", line 1138, in read
+    return self._sslobj.read(len, buffer)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\requests\models.py", line 820, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\urllib3\response.py", line 1091, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\urllib3\response.py", line 980, in read
+    data = self._raw_read(amt)
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\urllib3\response.py", line 903, in _raw_read
+    with self._error_catcher():
+         ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\urllib3\response.py", line 806, in _error_catcher
+    raise ProtocolError(f"Connection broken: {e!r}", e) from e
+urllib3.exceptions.ProtocolError: ("Connection broken: ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)", ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\disha\OneDrive\Desktop\Python\NLP-Text-Summarizer\main.py", line 42, in <module>
+    model_trainer.main()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "c:\users\disha\onedrive\desktop\python\nlp-text-summarizer\src\textSummarizer\pipeline\stage_04_model_trainer.py", line 14, in main
+    model_trainer_config.train()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\users\disha\onedrive\desktop\python\nlp-text-summarizer\src\textSummarizer\components\model_trainer.py", line 19, in train
+    model_pegasus = AutoModelForSeq2SeqLM.from_pretrained(self.config.model_ckpt).to(device)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\models\auto\auto_factory.py", line 600, in from_pretrained
+    return model_class.from_pretrained(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        pretrained_model_name_or_path, *model_args, config=config, **hub_kwargs, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\modeling_utils.py", line 317, in _wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\modeling_utils.py", line 4923, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        pretrained_model_name_or_path=pretrained_model_name_or_path,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<15 lines>...
+        transformers_explicit_filename=transformers_explicit_filename,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\modeling_utils.py", line 1208, in _get_resolved_checkpoint_files
+    resolved_archive_file = cached_file(
+        pretrained_model_name_or_path, filename, **cached_file_kwargs
+    )
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\utils\hub.py", line 321, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\utils\hub.py", line 567, in cached_files
+    raise e
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\utils\hub.py", line 479, in cached_files
+    hf_hub_download(
+    ~~~~~~~~~~~~~~~^
+        path_or_repo_id,
+        ^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        local_files_only=local_files_only,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\huggingface_hub\utils\_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\huggingface_hub\file_download.py", line 1010, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+        # Destination
+    ...<14 lines>...
+        force_download=force_download,
+    )
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\huggingface_hub\file_download.py", line 1171, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        incomplete_path=Path(blob_path + ".incomplete"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+        xet_file_data=xet_file_data,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\huggingface_hub\file_download.py", line 1738, in _download_to_tmp_and_move
+    http_get(
+    ~~~~~~~~^
+        url_to_download,
+        ^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        expected_size=expected_size,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\huggingface_hub\file_download.py", line 496, in http_get
+    for chunk in r.iter_content(chunk_size=constants.DOWNLOAD_CHUNK_SIZE):
+                 ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\requests\models.py", line 822, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ("Connection broken: ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)", ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+[2025-08-24 20:51:00,510: INFO: main: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-08-24 20:51:00,514: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 20:51:00,516: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 20:51:00,516: INFO: common: created directory at: artifacts]
+[2025-08-24 20:51:00,517: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-24 20:51:00,517: INFO: data_ingestion: File already exists of size: ~ 7718 KB]
+[2025-08-24 20:51:00,659: INFO: main: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-08-24 20:51:00,659: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-08-24 20:51:00,662: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 20:51:00,664: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 20:51:00,664: INFO: common: created directory at: artifacts]
+[2025-08-24 20:51:00,664: INFO: common: created directory at: artifacts/data_validation]
+[2025-08-24 20:51:00,667: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-08-24 20:51:00,667: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-08-24 20:51:00,670: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 20:51:00,672: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 20:51:00,672: INFO: common: created directory at: artifacts]
+[2025-08-24 20:51:00,673: INFO: common: created directory at: artifacts/data_transformation]
+[2025-08-24 20:51:02,007: ERROR: main: (ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 05441e0d-1cdf-4e2c-9af9-8a3aef09368f)')]
+Traceback (most recent call last):
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\urllib3\connection.py", line 790, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+        sock=sock,
+    ...<14 lines>...
+        assert_fingerprint=self.assert_fingerprint,
+    )
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\urllib3\connection.py", line 969, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+        sock=sock,
+    ...<8 lines>...
+        tls_in_tls=tls_in_tls,
+    )
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\urllib3\util\ssl_.py", line 480, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\urllib3\util\ssl_.py", line 524, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\ssl.py", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sock=sock,
+        ^^^^^^^^^^
+    ...<5 lines>...
+        session=session
+        ^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\ssl.py", line 1076, in _create
+    self.do_handshake()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\ssl.py", line 1372, in do_handshake
+    self._sslobj.do_handshake()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\requests\adapters.py", line 644, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\urllib3\util\retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\urllib3\util\util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\urllib3\connection.py", line 790, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+        sock=sock,
+    ...<14 lines>...
+        assert_fingerprint=self.assert_fingerprint,
+    )
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\urllib3\connection.py", line 969, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+        sock=sock,
+    ...<8 lines>...
+        tls_in_tls=tls_in_tls,
+    )
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\urllib3\util\ssl_.py", line 480, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\urllib3\util\ssl_.py", line 524, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\ssl.py", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sock=sock,
+        ^^^^^^^^^^
+    ...<5 lines>...
+        session=session
+        ^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\ssl.py", line 1076, in _create
+    self.do_handshake()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\ssl.py", line 1372, in do_handshake
+    self._sslobj.do_handshake()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\disha\OneDrive\Desktop\Python\NLP-Text-Summarizer\main.py", line 31, in <module>
+    data_transformation.main()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\users\disha\onedrive\desktop\python\nlp-text-summarizer\src\textSummarizer\pipeline\stage_03_data_transformation.py", line 13, in main
+    data_transformation = DataTransformation(config=data_transformation_config)
+  File "c:\users\disha\onedrive\desktop\python\nlp-text-summarizer\src\textSummarizer\components\data_transformation.py", line 13, in __init__
+    self.tokenizer = AutoTokenizer.from_pretrained(config.tokenizer_name,use_fast=False)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\models\auto\tokenization_auto.py", line 1138, in from_pretrained
+    return tokenizer_class_py.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\tokenization_utils_base.py", line 2012, in from_pretrained
+    for template in list_repo_templates(
+                    ~~~~~~~~~~~~~~~~~~~^
+        pretrained_model_name_or_path,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        cache_dir=cache_dir,
+        ^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\utils\hub.py", line 169, in list_repo_templates
+    for entry in list_repo_tree(
+                 ~~~~~~~~~~~~~~^
+        repo_id=repo_id,
+        ^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        recursive=False,
+        ^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\huggingface_hub\hf_api.py", line 3177, in list_repo_tree
+    for path_info in paginate(path=tree_url, headers=headers, params={"recursive": recursive, "expand": expand}):
+                     ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\huggingface_hub\utils\_pagination.py", line 36, in paginate
+    r = session.get(path, params=params, headers=headers)
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\requests\sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\huggingface_hub\utils\_http.py", line 96, in send
+    return super().send(request, *args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\requests\adapters.py", line 659, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: (ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 05441e0d-1cdf-4e2c-9af9-8a3aef09368f)')
+[2025-08-24 20:52:51,022: INFO: main: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-08-24 20:52:51,025: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 20:52:51,027: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 20:52:51,028: INFO: common: created directory at: artifacts]
+[2025-08-24 20:52:51,029: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-24 20:52:58,744: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 7903594
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "dbc016a060da18070593b83afff580c9b300f0b6ea4147a7988433e04df246ca"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: B23C:304C92:20A082:58446B:68AB2E4D
+Accept-Ranges: bytes
+Date: Sun, 24 Aug 2025 15:22:55 GMT
+Via: 1.1 varnish
+X-Served-By: cache-del21724-DEL
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1756048973.209871,VS0,VE2133
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 782f9c4f8342cc147fff5601df2a2b86982e1744
+Expires: Sun, 24 Aug 2025 15:27:55 GMT
+Source-Age: 2
+
+]
+[2025-08-24 20:52:58,918: INFO: main: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-08-24 20:52:58,919: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-08-24 20:52:58,922: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 20:52:58,924: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 20:52:58,924: INFO: common: created directory at: artifacts]
+[2025-08-24 20:52:58,925: INFO: common: created directory at: artifacts/data_validation]
+[2025-08-24 20:52:58,928: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-08-24 20:52:58,929: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-08-24 20:52:58,932: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 20:52:58,934: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 20:52:58,935: INFO: common: created directory at: artifacts]
+[2025-08-24 20:52:58,936: INFO: common: created directory at: artifacts/data_transformation]
+[2025-08-24 20:53:13,392: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-08-24 20:53:13,393: INFO: main: *******************]
+[2025-08-24 20:53:13,393: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-08-24 20:53:13,396: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 20:53:13,398: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 20:53:13,398: INFO: common: created directory at: artifacts]
+[2025-08-24 20:53:13,399: INFO: common: created directory at: artifacts/model_trainer]
+[2025-08-24 20:53:16,544: WARNING: file_download: Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`]
+[2025-08-24 21:02:25,500: ERROR: main: ("Connection broken: ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)", ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))]
+Traceback (most recent call last):
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\urllib3\response.py", line 779, in _error_catcher
+    yield
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\urllib3\response.py", line 904, in _raw_read
+    data = self._fp_read(amt, read1=read1) if not fp_closed else b""
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\urllib3\response.py", line 887, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+           ~~~~~~~~~~~~~^^^^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\http\client.py", line 479, in read
+    s = self.fp.read(amt)
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\ssl.py", line 1304, in recv_into
+    return self.read(nbytes, buffer)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\ssl.py", line 1138, in read
+    return self._sslobj.read(len, buffer)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\requests\models.py", line 820, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\urllib3\response.py", line 1091, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\urllib3\response.py", line 980, in read
+    data = self._raw_read(amt)
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\urllib3\response.py", line 903, in _raw_read
+    with self._error_catcher():
+         ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\urllib3\response.py", line 806, in _error_catcher
+    raise ProtocolError(f"Connection broken: {e!r}", e) from e
+urllib3.exceptions.ProtocolError: ("Connection broken: ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)", ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\disha\OneDrive\Desktop\Python\NLP-Text-Summarizer\main.py", line 42, in <module>
+    model_trainer.main()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "c:\users\disha\onedrive\desktop\python\nlp-text-summarizer\src\textSummarizer\pipeline\stage_04_model_trainer.py", line 14, in main
+    model_trainer_config.train()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\users\disha\onedrive\desktop\python\nlp-text-summarizer\src\textSummarizer\components\model_trainer.py", line 19, in train
+    model_pegasus = AutoModelForSeq2SeqLM.from_pretrained(self.config.model_ckpt).to(device)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\models\auto\auto_factory.py", line 600, in from_pretrained
+    return model_class.from_pretrained(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        pretrained_model_name_or_path, *model_args, config=config, **hub_kwargs, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\modeling_utils.py", line 317, in _wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\modeling_utils.py", line 4923, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        pretrained_model_name_or_path=pretrained_model_name_or_path,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<15 lines>...
+        transformers_explicit_filename=transformers_explicit_filename,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\modeling_utils.py", line 1208, in _get_resolved_checkpoint_files
+    resolved_archive_file = cached_file(
+        pretrained_model_name_or_path, filename, **cached_file_kwargs
+    )
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\utils\hub.py", line 321, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\utils\hub.py", line 567, in cached_files
+    raise e
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\utils\hub.py", line 479, in cached_files
+    hf_hub_download(
+    ~~~~~~~~~~~~~~~^
+        path_or_repo_id,
+        ^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        local_files_only=local_files_only,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\huggingface_hub\utils\_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\huggingface_hub\file_download.py", line 1010, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+        # Destination
+    ...<14 lines>...
+        force_download=force_download,
+    )
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\huggingface_hub\file_download.py", line 1171, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        incomplete_path=Path(blob_path + ".incomplete"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+        xet_file_data=xet_file_data,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\huggingface_hub\file_download.py", line 1738, in _download_to_tmp_and_move
+    http_get(
+    ~~~~~~~~^
+        url_to_download,
+        ^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        expected_size=expected_size,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\huggingface_hub\file_download.py", line 496, in http_get
+    for chunk in r.iter_content(chunk_size=constants.DOWNLOAD_CHUNK_SIZE):
+                 ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\requests\models.py", line 822, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ("Connection broken: ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)", ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+[2025-08-24 21:23:42,405: INFO: main: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-08-24 21:23:42,408: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 21:23:42,410: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 21:23:42,410: INFO: common: created directory at: artifacts]
+[2025-08-24 21:23:42,410: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-24 21:23:42,411: INFO: data_ingestion: File already exists of size: ~ 7718 KB]
+[2025-08-24 21:23:42,507: INFO: main: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-08-24 21:23:42,507: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-08-24 21:23:42,508: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 21:23:42,510: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 21:23:42,510: INFO: common: created directory at: artifacts]
+[2025-08-24 21:23:42,510: INFO: common: created directory at: artifacts/data_validation]
+[2025-08-24 21:23:42,511: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-08-24 21:23:42,512: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-08-24 21:23:42,513: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 21:23:42,514: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 21:23:42,515: INFO: common: created directory at: artifacts]
+[2025-08-24 21:23:42,515: INFO: common: created directory at: artifacts/data_transformation]
+[2025-08-24 21:23:46,605: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-08-24 21:23:46,605: INFO: main: *******************]
+[2025-08-24 21:23:46,605: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-08-24 21:23:46,608: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 21:23:46,610: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 21:23:46,611: INFO: common: created directory at: artifacts]
+[2025-08-24 21:23:46,611: INFO: common: created directory at: artifacts/model_trainer]
+[2025-08-24 21:23:51,685: WARNING: file_download: Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`]
+[2025-08-24 21:24:46,974: WARNING: file_download: Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`]
+[2025-08-24 21:24:50,704: ERROR: main: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy']
+Traceback (most recent call last):
+  File "C:\Users\disha\OneDrive\Desktop\Python\NLP-Text-Summarizer\main.py", line 42, in <module>
+    model_trainer.main()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "c:\users\disha\onedrive\desktop\python\nlp-text-summarizer\src\textSummarizer\pipeline\stage_04_model_trainer.py", line 14, in main
+    model_trainer_config.train()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\users\disha\onedrive\desktop\python\nlp-text-summarizer\src\textSummarizer\components\model_trainer.py", line 34, in train
+    trainer_args = TrainingArguments(
+        output_dir=self.config.root_dir, num_train_epochs=1, warmup_steps=500,
+    ...<3 lines>...
+        gradient_accumulation_steps=16
+    )
+TypeError: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy'
+[2025-08-24 21:39:20,297: INFO: main: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-08-24 21:39:20,300: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 21:39:20,302: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 21:39:20,303: INFO: common: created directory at: artifacts]
+[2025-08-24 21:39:20,303: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-24 21:39:44,017: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 7903594
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "dbc016a060da18070593b83afff580c9b300f0b6ea4147a7988433e04df246ca"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: BFC9:E07A7:215F3F:5A1062:68AB3938
+Accept-Ranges: bytes
+Date: Sun, 24 Aug 2025 16:09:29 GMT
+Via: 1.1 varnish
+X-Served-By: cache-ccu830035-CCU
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1756051769.328465,VS0,VE649
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 91cdbf2c7b565c5b5879a41884018937b1a2ece1
+Expires: Sun, 24 Aug 2025 16:14:29 GMT
+Source-Age: 0
+
+]
+[2025-08-24 21:39:44,135: INFO: main: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-08-24 21:39:44,136: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-08-24 21:39:44,138: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 21:39:44,139: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 21:39:44,139: INFO: common: created directory at: artifacts]
+[2025-08-24 21:39:44,140: INFO: common: created directory at: artifacts/data_validation]
+[2025-08-24 21:39:44,142: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-08-24 21:39:44,142: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-08-24 21:39:44,145: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 21:39:44,146: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 21:39:44,147: INFO: common: created directory at: artifacts]
+[2025-08-24 21:39:44,147: INFO: common: created directory at: artifacts/data_transformation]
+[2025-08-24 21:40:01,205: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-08-24 21:40:01,206: INFO: main: *******************]
+[2025-08-24 21:40:01,206: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-08-24 21:40:01,208: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 21:40:01,210: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 21:40:01,210: INFO: common: created directory at: artifacts]
+[2025-08-24 21:40:01,211: INFO: common: created directory at: artifacts/model_trainer]
+[2025-08-24 21:40:21,033: ERROR: main: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy']
+Traceback (most recent call last):
+  File "C:\Users\disha\OneDrive\Desktop\Python\NLP-Text-Summarizer\main.py", line 42, in <module>
+    model_trainer.main()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "c:\users\disha\onedrive\desktop\python\nlp-text-summarizer\src\textSummarizer\pipeline\stage_04_model_trainer.py", line 14, in main
+    model_trainer_config.train()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\users\disha\onedrive\desktop\python\nlp-text-summarizer\src\textSummarizer\components\model_trainer.py", line 34, in train
+    trainer_args = TrainingArguments(
+        output_dir=self.config.root_dir, num_train_epochs=1, warmup_steps=500,
+    ...<3 lines>...
+        gradient_accumulation_steps=16
+    )
+TypeError: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy'
+[2025-08-24 21:48:44,258: INFO: main: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-08-24 21:48:44,261: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 21:48:44,263: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 21:48:44,263: INFO: common: created directory at: artifacts]
+[2025-08-24 21:48:44,263: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-24 21:48:44,263: INFO: data_ingestion: File already exists of size: ~ 7718 KB]
+[2025-08-24 21:48:44,364: INFO: main: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-08-24 21:48:44,365: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-08-24 21:48:44,367: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 21:48:44,368: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 21:48:44,369: INFO: common: created directory at: artifacts]
+[2025-08-24 21:48:44,369: INFO: common: created directory at: artifacts/data_validation]
+[2025-08-24 21:48:44,371: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-08-24 21:48:44,371: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-08-24 21:48:44,373: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 21:48:44,375: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 21:48:44,375: INFO: common: created directory at: artifacts]
+[2025-08-24 21:48:44,376: INFO: common: created directory at: artifacts/data_transformation]
+[2025-08-24 21:48:53,574: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-08-24 21:48:53,575: INFO: main: *******************]
+[2025-08-24 21:48:53,575: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-08-24 21:48:53,577: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 21:48:53,579: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 21:48:53,580: INFO: common: created directory at: artifacts]
+[2025-08-24 21:48:53,580: INFO: common: created directory at: artifacts/model_trainer]
+[2025-08-24 21:49:15,430: ERROR: main: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy']
+Traceback (most recent call last):
+  File "C:\Users\disha\OneDrive\Desktop\Python\NLP-Text-Summarizer\main.py", line 42, in <module>
+    model_trainer.main()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "c:\users\disha\onedrive\desktop\python\nlp-text-summarizer\src\textSummarizer\pipeline\stage_04_model_trainer.py", line 14, in main
+    model_trainer_config.train()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\users\disha\onedrive\desktop\python\nlp-text-summarizer\src\textSummarizer\components\model_trainer.py", line 34, in train
+    trainer_args = TrainingArguments(
+        output_dir=self.config.root_dir, num_train_epochs=1, warmup_steps=500,
+    ...<3 lines>...
+        gradient_accumulation_steps=16
+    )
+TypeError: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy'
