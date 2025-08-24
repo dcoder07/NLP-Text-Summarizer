@@ -146,3 +146,510 @@ x==========x]
 [2025-08-24 00:36:05,327: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
 
 x==========x]
+[2025-08-24 00:51:32,994: INFO: main: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-08-24 00:51:32,998: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 00:51:33,001: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 00:51:33,001: INFO: common: created directory at: artifacts]
+[2025-08-24 00:51:33,002: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-24 00:51:33,002: INFO: data_ingestion: File already exists of size: ~ 7718 KB]
+[2025-08-24 00:51:33,141: INFO: main: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-08-24 00:51:33,141: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-08-24 00:51:33,144: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 00:51:33,146: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 00:51:33,146: INFO: common: created directory at: artifacts]
+[2025-08-24 00:51:33,147: INFO: common: created directory at: artifacts/data_validation]
+[2025-08-24 00:51:33,149: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-08-24 00:51:33,150: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-08-24 00:51:33,152: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 00:51:33,154: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 00:51:33,155: INFO: common: created directory at: artifacts]
+[2025-08-24 00:51:33,155: INFO: common: created directory at: artifacts/data_transformation]
+[2025-08-24 00:53:01,416: ERROR: main: 
+ requires the protobuf library but it was not found in your environment. Check out the instructions on the
+installation page of its repo: https://github.com/protocolbuffers/protobuf/tree/master/python#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+]
+Traceback (most recent call last):
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\convert_slow_tokenizer.py", line 1594, in extract_vocab_merges_from_model
+    from tiktoken.load import load_tiktoken_bpe
+ModuleNotFoundError: No module named 'tiktoken'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\convert_slow_tokenizer.py", line 1737, in convert_slow_tokenizer
+    ).converted()
+      ~~~~~~~~~^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\convert_slow_tokenizer.py", line 1631, in converted
+    tokenizer = self.tokenizer()
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\convert_slow_tokenizer.py", line 1624, in tokenizer
+    vocab_scores, merges = self.extract_vocab_merges_from_model(self.vocab_file)
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\convert_slow_tokenizer.py", line 1596, in extract_vocab_merges_from_model
+    raise ValueError(
+        "`tiktoken` is required to read a `tiktoken` file. Install it with `pip install tiktoken`."
+    )
+ValueError: `tiktoken` is required to read a `tiktoken` file. Install it with `pip install tiktoken`.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\tokenization_utils_base.py", line 2315, in _from_pretrained
+    tokenizer = cls(*init_inputs, **init_kwargs)
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\models\pegasus\tokenization_pegasus_fast.py", line 136, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        vocab_file,
+        ^^^^^^^^^^^
+    ...<9 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\tokenization_utils_fast.py", line 139, in __init__
+    fast_tokenizer = convert_slow_tokenizer(self, from_tiktoken=True)
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\convert_slow_tokenizer.py", line 1739, in convert_slow_tokenizer
+    raise ValueError(
+    ...<3 lines>...
+    )
+ValueError: Converting from SentencePiece and Tiktoken failed, if a converter for SentencePiece is available, provide a model path with a SentencePiece tokenizer.model file.Currently available slow->fast converters: ['AlbertTokenizer', 'BartTokenizer', 'BarthezTokenizer', 'BertTokenizer', 'BigBirdTokenizer', 'BlenderbotTokenizer', 'CamembertTokenizer', 'CLIPTokenizer', 'CodeGenTokenizer', 'ConvBertTokenizer', 'DebertaTokenizer', 'DebertaV2Tokenizer', 'DistilBertTokenizer', 'DPRReaderTokenizer', 'DPRQuestionEncoderTokenizer', 'DPRContextEncoderTokenizer', 'ElectraTokenizer', 'FNetTokenizer', 'FunnelTokenizer', 'GPT2Tokenizer', 'HerbertTokenizer', 'LayoutLMTokenizer', 'LayoutLMv2Tokenizer', 'LayoutLMv3Tokenizer', 'LayoutXLMTokenizer', 'LongformerTokenizer', 'LEDTokenizer', 'LxmertTokenizer', 'MarkupLMTokenizer', 'MBartTokenizer', 'MBart50Tokenizer', 'MPNetTokenizer', 'MobileBertTokenizer', 'MvpTokenizer', 'NllbTokenizer', 'OpenAIGPTTokenizer', 'PegasusTokenizer', 'Qwen2Tokenizer', 'RealmTokenizer', 'ReformerTokenizer', 'RemBertTokenizer', 'RetriBertTokenizer', 'RobertaTokenizer', 'RoFormerTokenizer', 'SeamlessM4TTokenizer', 'SqueezeBertTokenizer', 'T5Tokenizer', 'UdopTokenizer', 'WhisperTokenizer', 'XLMRobertaTokenizer', 'XLNetTokenizer', 'SplinterTokenizer', 'XGLMTokenizer', 'LlamaTokenizer', 'CodeLlamaTokenizer', 'GemmaTokenizer', 'Phi3Tokenizer']
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\disha\OneDrive\Desktop\Python\NLP-Text-Summarizer\main.py", line 30, in <module>
+    data_transformation.main()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\users\disha\onedrive\desktop\python\nlp-text-summarizer\src\textSummarizer\pipeline\stage_03_data_transformation.py", line 13, in main
+    data_transformation = DataTransformation(config=data_transformation_config)
+  File "c:\users\disha\onedrive\desktop\python\nlp-text-summarizer\src\textSummarizer\components\data_transformation.py", line 12, in __init__
+    self.tokenizer = AutoTokenizer.from_pretrained(config.tokenizer_name)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\models\auto\tokenization_auto.py", line 1135, in from_pretrained
+    return tokenizer_class_fast.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\tokenization_utils_base.py", line 2069, in from_pretrained
+    return cls._from_pretrained(
+           ~~~~~~~~~~~~~~~~~~~~^
+        resolved_vocab_files,
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\tokenization_utils_base.py", line 2316, in _from_pretrained
+    except import_protobuf_decode_error():
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\tokenization_utils_base.py", line 87, in import_protobuf_decode_error
+    raise ImportError(PROTOBUF_IMPORT_ERROR.format(error_message))
+ImportError: 
+ requires the protobuf library but it was not found in your environment. Check out the instructions on the
+installation page of its repo: https://github.com/protocolbuffers/protobuf/tree/master/python#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+[2025-08-24 01:00:57,219: INFO: main: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-08-24 01:00:57,222: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 01:00:57,224: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 01:00:57,224: INFO: common: created directory at: artifacts]
+[2025-08-24 01:00:57,224: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-24 01:00:57,225: INFO: data_ingestion: File already exists of size: ~ 7718 KB]
+[2025-08-24 01:00:57,365: INFO: main: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-08-24 01:00:57,366: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-08-24 01:00:57,368: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 01:00:57,371: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 01:00:57,371: INFO: common: created directory at: artifacts]
+[2025-08-24 01:00:57,372: INFO: common: created directory at: artifacts/data_validation]
+[2025-08-24 01:00:57,374: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-08-24 01:00:57,374: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-08-24 01:00:57,377: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 01:00:57,379: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 01:00:57,380: INFO: common: created directory at: artifacts]
+[2025-08-24 01:00:57,380: INFO: common: created directory at: artifacts/data_transformation]
+[2025-08-24 01:02:19,571: ERROR: main: 
+ requires the protobuf library but it was not found in your environment. Check out the instructions on the
+installation page of its repo: https://github.com/protocolbuffers/protobuf/tree/master/python#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+]
+Traceback (most recent call last):
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\convert_slow_tokenizer.py", line 1594, in extract_vocab_merges_from_model
+    from tiktoken.load import load_tiktoken_bpe
+ModuleNotFoundError: No module named 'tiktoken'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\convert_slow_tokenizer.py", line 1737, in convert_slow_tokenizer
+    ).converted()
+      ~~~~~~~~~^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\convert_slow_tokenizer.py", line 1631, in converted
+    tokenizer = self.tokenizer()
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\convert_slow_tokenizer.py", line 1624, in tokenizer
+    vocab_scores, merges = self.extract_vocab_merges_from_model(self.vocab_file)
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\convert_slow_tokenizer.py", line 1596, in extract_vocab_merges_from_model
+    raise ValueError(
+        "`tiktoken` is required to read a `tiktoken` file. Install it with `pip install tiktoken`."
+    )
+ValueError: `tiktoken` is required to read a `tiktoken` file. Install it with `pip install tiktoken`.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\tokenization_utils_base.py", line 2315, in _from_pretrained
+    tokenizer = cls(*init_inputs, **init_kwargs)
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\models\pegasus\tokenization_pegasus_fast.py", line 136, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        vocab_file,
+        ^^^^^^^^^^^
+    ...<9 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\tokenization_utils_fast.py", line 139, in __init__
+    fast_tokenizer = convert_slow_tokenizer(self, from_tiktoken=True)
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\convert_slow_tokenizer.py", line 1739, in convert_slow_tokenizer
+    raise ValueError(
+    ...<3 lines>...
+    )
+ValueError: Converting from SentencePiece and Tiktoken failed, if a converter for SentencePiece is available, provide a model path with a SentencePiece tokenizer.model file.Currently available slow->fast converters: ['AlbertTokenizer', 'BartTokenizer', 'BarthezTokenizer', 'BertTokenizer', 'BigBirdTokenizer', 'BlenderbotTokenizer', 'CamembertTokenizer', 'CLIPTokenizer', 'CodeGenTokenizer', 'ConvBertTokenizer', 'DebertaTokenizer', 'DebertaV2Tokenizer', 'DistilBertTokenizer', 'DPRReaderTokenizer', 'DPRQuestionEncoderTokenizer', 'DPRContextEncoderTokenizer', 'ElectraTokenizer', 'FNetTokenizer', 'FunnelTokenizer', 'GPT2Tokenizer', 'HerbertTokenizer', 'LayoutLMTokenizer', 'LayoutLMv2Tokenizer', 'LayoutLMv3Tokenizer', 'LayoutXLMTokenizer', 'LongformerTokenizer', 'LEDTokenizer', 'LxmertTokenizer', 'MarkupLMTokenizer', 'MBartTokenizer', 'MBart50Tokenizer', 'MPNetTokenizer', 'MobileBertTokenizer', 'MvpTokenizer', 'NllbTokenizer', 'OpenAIGPTTokenizer', 'PegasusTokenizer', 'Qwen2Tokenizer', 'RealmTokenizer', 'ReformerTokenizer', 'RemBertTokenizer', 'RetriBertTokenizer', 'RobertaTokenizer', 'RoFormerTokenizer', 'SeamlessM4TTokenizer', 'SqueezeBertTokenizer', 'T5Tokenizer', 'UdopTokenizer', 'WhisperTokenizer', 'XLMRobertaTokenizer', 'XLNetTokenizer', 'SplinterTokenizer', 'XGLMTokenizer', 'LlamaTokenizer', 'CodeLlamaTokenizer', 'GemmaTokenizer', 'Phi3Tokenizer']
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\disha\OneDrive\Desktop\Python\NLP-Text-Summarizer\main.py", line 30, in <module>
+    data_transformation.main()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\users\disha\onedrive\desktop\python\nlp-text-summarizer\src\textSummarizer\pipeline\stage_03_data_transformation.py", line 13, in main
+    data_transformation = DataTransformation(config=data_transformation_config)
+  File "c:\users\disha\onedrive\desktop\python\nlp-text-summarizer\src\textSummarizer\components\data_transformation.py", line 13, in __init__
+    self.tokenizer = AutoTokenizer.from_pretrained(config.tokenizer_name)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\models\auto\tokenization_auto.py", line 1135, in from_pretrained
+    return tokenizer_class_fast.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\tokenization_utils_base.py", line 2069, in from_pretrained
+    return cls._from_pretrained(
+           ~~~~~~~~~~~~~~~~~~~~^
+        resolved_vocab_files,
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\tokenization_utils_base.py", line 2316, in _from_pretrained
+    except import_protobuf_decode_error():
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\tokenization_utils_base.py", line 87, in import_protobuf_decode_error
+    raise ImportError(PROTOBUF_IMPORT_ERROR.format(error_message))
+ImportError: 
+ requires the protobuf library but it was not found in your environment. Check out the instructions on the
+installation page of its repo: https://github.com/protocolbuffers/protobuf/tree/master/python#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+[2025-08-24 01:06:53,551: INFO: main: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-08-24 01:06:53,554: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 01:06:53,557: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 01:06:53,557: INFO: common: created directory at: artifacts]
+[2025-08-24 01:06:53,558: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-24 01:06:53,558: INFO: data_ingestion: File already exists of size: ~ 7718 KB]
+[2025-08-24 01:06:53,701: INFO: main: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-08-24 01:06:53,701: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-08-24 01:06:53,703: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 01:06:53,705: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 01:06:53,706: INFO: common: created directory at: artifacts]
+[2025-08-24 01:06:53,707: INFO: common: created directory at: artifacts/data_validation]
+[2025-08-24 01:06:53,709: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-08-24 01:06:53,710: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-08-24 01:06:53,712: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 01:06:53,715: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 01:06:53,716: INFO: common: created directory at: artifacts]
+[2025-08-24 01:06:53,717: INFO: common: created directory at: artifacts/data_transformation]
+[2025-08-24 01:08:15,961: ERROR: main: 
+ requires the protobuf library but it was not found in your environment. Check out the instructions on the
+installation page of its repo: https://github.com/protocolbuffers/protobuf/tree/master/python#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+]
+Traceback (most recent call last):
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\convert_slow_tokenizer.py", line 1737, in convert_slow_tokenizer
+    ).converted()
+      ~~~~~~~~~^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\convert_slow_tokenizer.py", line 1631, in converted
+    tokenizer = self.tokenizer()
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\convert_slow_tokenizer.py", line 1624, in tokenizer
+    vocab_scores, merges = self.extract_vocab_merges_from_model(self.vocab_file)
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\convert_slow_tokenizer.py", line 1600, in extract_vocab_merges_from_model
+    bpe_ranks = load_tiktoken_bpe(tiktoken_url)
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\tiktoken\load.py", line 158, in load_tiktoken_bpe
+    contents = read_file_cached(tiktoken_bpe_file, expected_hash)
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\tiktoken\load.py", line 48, in read_file_cached
+    cache_key = hashlib.sha1(blobpath.encode()).hexdigest()
+                             ^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'encode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\tokenization_utils_base.py", line 2315, in _from_pretrained
+    tokenizer = cls(*init_inputs, **init_kwargs)
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\models\pegasus\tokenization_pegasus_fast.py", line 136, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        vocab_file,
+        ^^^^^^^^^^^
+    ...<9 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\tokenization_utils_fast.py", line 139, in __init__
+    fast_tokenizer = convert_slow_tokenizer(self, from_tiktoken=True)
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\convert_slow_tokenizer.py", line 1739, in convert_slow_tokenizer
+    raise ValueError(
+    ...<3 lines>...
+    )
+ValueError: Converting from SentencePiece and Tiktoken failed, if a converter for SentencePiece is available, provide a model path with a SentencePiece tokenizer.model file.Currently available slow->fast converters: ['AlbertTokenizer', 'BartTokenizer', 'BarthezTokenizer', 'BertTokenizer', 'BigBirdTokenizer', 'BlenderbotTokenizer', 'CamembertTokenizer', 'CLIPTokenizer', 'CodeGenTokenizer', 'ConvBertTokenizer', 'DebertaTokenizer', 'DebertaV2Tokenizer', 'DistilBertTokenizer', 'DPRReaderTokenizer', 'DPRQuestionEncoderTokenizer', 'DPRContextEncoderTokenizer', 'ElectraTokenizer', 'FNetTokenizer', 'FunnelTokenizer', 'GPT2Tokenizer', 'HerbertTokenizer', 'LayoutLMTokenizer', 'LayoutLMv2Tokenizer', 'LayoutLMv3Tokenizer', 'LayoutXLMTokenizer', 'LongformerTokenizer', 'LEDTokenizer', 'LxmertTokenizer', 'MarkupLMTokenizer', 'MBartTokenizer', 'MBart50Tokenizer', 'MPNetTokenizer', 'MobileBertTokenizer', 'MvpTokenizer', 'NllbTokenizer', 'OpenAIGPTTokenizer', 'PegasusTokenizer', 'Qwen2Tokenizer', 'RealmTokenizer', 'ReformerTokenizer', 'RemBertTokenizer', 'RetriBertTokenizer', 'RobertaTokenizer', 'RoFormerTokenizer', 'SeamlessM4TTokenizer', 'SqueezeBertTokenizer', 'T5Tokenizer', 'UdopTokenizer', 'WhisperTokenizer', 'XLMRobertaTokenizer', 'XLNetTokenizer', 'SplinterTokenizer', 'XGLMTokenizer', 'LlamaTokenizer', 'CodeLlamaTokenizer', 'GemmaTokenizer', 'Phi3Tokenizer']
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\disha\OneDrive\Desktop\Python\NLP-Text-Summarizer\main.py", line 30, in <module>
+    data_transformation.main()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\users\disha\onedrive\desktop\python\nlp-text-summarizer\src\textSummarizer\pipeline\stage_03_data_transformation.py", line 13, in main
+    data_transformation = DataTransformation(config=data_transformation_config)
+  File "c:\users\disha\onedrive\desktop\python\nlp-text-summarizer\src\textSummarizer\components\data_transformation.py", line 13, in __init__
+    self.tokenizer = AutoTokenizer.from_pretrained(config.tokenizer_name)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\models\auto\tokenization_auto.py", line 1135, in from_pretrained
+    return tokenizer_class_fast.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\tokenization_utils_base.py", line 2069, in from_pretrained
+    return cls._from_pretrained(
+           ~~~~~~~~~~~~~~~~~~~~^
+        resolved_vocab_files,
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\tokenization_utils_base.py", line 2316, in _from_pretrained
+    except import_protobuf_decode_error():
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\tokenization_utils_base.py", line 87, in import_protobuf_decode_error
+    raise ImportError(PROTOBUF_IMPORT_ERROR.format(error_message))
+ImportError: 
+ requires the protobuf library but it was not found in your environment. Check out the instructions on the
+installation page of its repo: https://github.com/protocolbuffers/protobuf/tree/master/python#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+[2025-08-24 01:14:58,745: INFO: main: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-08-24 01:14:58,748: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 01:14:58,750: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 01:14:58,750: INFO: common: created directory at: artifacts]
+[2025-08-24 01:14:58,751: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-24 01:14:58,751: INFO: data_ingestion: File already exists of size: ~ 7718 KB]
+[2025-08-24 01:14:58,889: INFO: main: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-08-24 01:14:58,890: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-08-24 01:14:58,892: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 01:14:58,894: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 01:14:58,895: INFO: common: created directory at: artifacts]
+[2025-08-24 01:14:58,895: INFO: common: created directory at: artifacts/data_validation]
+[2025-08-24 01:14:58,898: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-08-24 01:14:58,899: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-08-24 01:14:58,901: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 01:14:58,904: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 01:14:58,904: INFO: common: created directory at: artifacts]
+[2025-08-24 01:14:58,906: INFO: common: created directory at: artifacts/data_transformation]
+[2025-08-24 01:16:21,329: ERROR: main: Converting from SentencePiece and Tiktoken failed, if a converter for SentencePiece is available, provide a model path with a SentencePiece tokenizer.model file.Currently available slow->fast converters: ['AlbertTokenizer', 'BartTokenizer', 'BarthezTokenizer', 'BertTokenizer', 'BigBirdTokenizer', 'BlenderbotTokenizer', 'CamembertTokenizer', 'CLIPTokenizer', 'CodeGenTokenizer', 'ConvBertTokenizer', 'DebertaTokenizer', 'DebertaV2Tokenizer', 'DistilBertTokenizer', 'DPRReaderTokenizer', 'DPRQuestionEncoderTokenizer', 'DPRContextEncoderTokenizer', 'ElectraTokenizer', 'FNetTokenizer', 'FunnelTokenizer', 'GPT2Tokenizer', 'HerbertTokenizer', 'LayoutLMTokenizer', 'LayoutLMv2Tokenizer', 'LayoutLMv3Tokenizer', 'LayoutXLMTokenizer', 'LongformerTokenizer', 'LEDTokenizer', 'LxmertTokenizer', 'MarkupLMTokenizer', 'MBartTokenizer', 'MBart50Tokenizer', 'MPNetTokenizer', 'MobileBertTokenizer', 'MvpTokenizer', 'NllbTokenizer', 'OpenAIGPTTokenizer', 'PegasusTokenizer', 'Qwen2Tokenizer', 'RealmTokenizer', 'ReformerTokenizer', 'RemBertTokenizer', 'RetriBertTokenizer', 'RobertaTokenizer', 'RoFormerTokenizer', 'SeamlessM4TTokenizer', 'SqueezeBertTokenizer', 'T5Tokenizer', 'UdopTokenizer', 'WhisperTokenizer', 'XLMRobertaTokenizer', 'XLNetTokenizer', 'SplinterTokenizer', 'XGLMTokenizer', 'LlamaTokenizer', 'CodeLlamaTokenizer', 'GemmaTokenizer', 'Phi3Tokenizer']]
+Traceback (most recent call last):
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\convert_slow_tokenizer.py", line 1737, in convert_slow_tokenizer
+    ).converted()
+      ~~~~~~~~~^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\convert_slow_tokenizer.py", line 1631, in converted
+    tokenizer = self.tokenizer()
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\convert_slow_tokenizer.py", line 1624, in tokenizer
+    vocab_scores, merges = self.extract_vocab_merges_from_model(self.vocab_file)
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\convert_slow_tokenizer.py", line 1600, in extract_vocab_merges_from_model
+    bpe_ranks = load_tiktoken_bpe(tiktoken_url)
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\tiktoken\load.py", line 158, in load_tiktoken_bpe
+    contents = read_file_cached(tiktoken_bpe_file, expected_hash)
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\tiktoken\load.py", line 48, in read_file_cached
+    cache_key = hashlib.sha1(blobpath.encode()).hexdigest()
+                             ^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'encode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\disha\OneDrive\Desktop\Python\NLP-Text-Summarizer\main.py", line 30, in <module>
+    data_transformation.main()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\users\disha\onedrive\desktop\python\nlp-text-summarizer\src\textSummarizer\pipeline\stage_03_data_transformation.py", line 13, in main
+    data_transformation = DataTransformation(config=data_transformation_config)
+  File "c:\users\disha\onedrive\desktop\python\nlp-text-summarizer\src\textSummarizer\components\data_transformation.py", line 13, in __init__
+    self.tokenizer = AutoTokenizer.from_pretrained(config.tokenizer_name)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\models\auto\tokenization_auto.py", line 1135, in from_pretrained
+    return tokenizer_class_fast.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\tokenization_utils_base.py", line 2069, in from_pretrained
+    return cls._from_pretrained(
+           ~~~~~~~~~~~~~~~~~~~~^
+        resolved_vocab_files,
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\tokenization_utils_base.py", line 2315, in _from_pretrained
+    tokenizer = cls(*init_inputs, **init_kwargs)
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\models\pegasus\tokenization_pegasus_fast.py", line 136, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        vocab_file,
+        ^^^^^^^^^^^
+    ...<9 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\tokenization_utils_fast.py", line 139, in __init__
+    fast_tokenizer = convert_slow_tokenizer(self, from_tiktoken=True)
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\convert_slow_tokenizer.py", line 1739, in convert_slow_tokenizer
+    raise ValueError(
+    ...<3 lines>...
+    )
+ValueError: Converting from SentencePiece and Tiktoken failed, if a converter for SentencePiece is available, provide a model path with a SentencePiece tokenizer.model file.Currently available slow->fast converters: ['AlbertTokenizer', 'BartTokenizer', 'BarthezTokenizer', 'BertTokenizer', 'BigBirdTokenizer', 'BlenderbotTokenizer', 'CamembertTokenizer', 'CLIPTokenizer', 'CodeGenTokenizer', 'ConvBertTokenizer', 'DebertaTokenizer', 'DebertaV2Tokenizer', 'DistilBertTokenizer', 'DPRReaderTokenizer', 'DPRQuestionEncoderTokenizer', 'DPRContextEncoderTokenizer', 'ElectraTokenizer', 'FNetTokenizer', 'FunnelTokenizer', 'GPT2Tokenizer', 'HerbertTokenizer', 'LayoutLMTokenizer', 'LayoutLMv2Tokenizer', 'LayoutLMv3Tokenizer', 'LayoutXLMTokenizer', 'LongformerTokenizer', 'LEDTokenizer', 'LxmertTokenizer', 'MarkupLMTokenizer', 'MBartTokenizer', 'MBart50Tokenizer', 'MPNetTokenizer', 'MobileBertTokenizer', 'MvpTokenizer', 'NllbTokenizer', 'OpenAIGPTTokenizer', 'PegasusTokenizer', 'Qwen2Tokenizer', 'RealmTokenizer', 'ReformerTokenizer', 'RemBertTokenizer', 'RetriBertTokenizer', 'RobertaTokenizer', 'RoFormerTokenizer', 'SeamlessM4TTokenizer', 'SqueezeBertTokenizer', 'T5Tokenizer', 'UdopTokenizer', 'WhisperTokenizer', 'XLMRobertaTokenizer', 'XLNetTokenizer', 'SplinterTokenizer', 'XGLMTokenizer', 'LlamaTokenizer', 'CodeLlamaTokenizer', 'GemmaTokenizer', 'Phi3Tokenizer']
+[2025-08-24 20:22:39,565: INFO: main: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-08-24 20:22:39,568: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 20:22:39,570: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 20:22:39,570: INFO: common: created directory at: artifacts]
+[2025-08-24 20:22:39,571: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-24 20:22:39,571: INFO: data_ingestion: File already exists of size: ~ 7718 KB]
+[2025-08-24 20:22:39,693: INFO: main: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-08-24 20:22:39,693: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-08-24 20:22:39,695: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 20:22:39,697: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 20:22:39,697: INFO: common: created directory at: artifacts]
+[2025-08-24 20:22:39,697: INFO: common: created directory at: artifacts/data_validation]
+[2025-08-24 20:22:39,700: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-08-24 20:22:39,700: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-08-24 20:22:39,703: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 20:22:39,706: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 20:22:39,706: INFO: common: created directory at: artifacts]
+[2025-08-24 20:22:39,707: INFO: common: created directory at: artifacts/data_transformation]
+[2025-08-24 20:22:41,664: ERROR: main: Converting from SentencePiece and Tiktoken failed, if a converter for SentencePiece is available, provide a model path with a SentencePiece tokenizer.model file.Currently available slow->fast converters: ['AlbertTokenizer', 'BartTokenizer', 'BarthezTokenizer', 'BertTokenizer', 'BigBirdTokenizer', 'BlenderbotTokenizer', 'CamembertTokenizer', 'CLIPTokenizer', 'CodeGenTokenizer', 'ConvBertTokenizer', 'DebertaTokenizer', 'DebertaV2Tokenizer', 'DistilBertTokenizer', 'DPRReaderTokenizer', 'DPRQuestionEncoderTokenizer', 'DPRContextEncoderTokenizer', 'ElectraTokenizer', 'FNetTokenizer', 'FunnelTokenizer', 'GPT2Tokenizer', 'HerbertTokenizer', 'LayoutLMTokenizer', 'LayoutLMv2Tokenizer', 'LayoutLMv3Tokenizer', 'LayoutXLMTokenizer', 'LongformerTokenizer', 'LEDTokenizer', 'LxmertTokenizer', 'MarkupLMTokenizer', 'MBartTokenizer', 'MBart50Tokenizer', 'MPNetTokenizer', 'MobileBertTokenizer', 'MvpTokenizer', 'NllbTokenizer', 'OpenAIGPTTokenizer', 'PegasusTokenizer', 'Qwen2Tokenizer', 'RealmTokenizer', 'ReformerTokenizer', 'RemBertTokenizer', 'RetriBertTokenizer', 'RobertaTokenizer', 'RoFormerTokenizer', 'SeamlessM4TTokenizer', 'SqueezeBertTokenizer', 'T5Tokenizer', 'UdopTokenizer', 'WhisperTokenizer', 'XLMRobertaTokenizer', 'XLNetTokenizer', 'SplinterTokenizer', 'XGLMTokenizer', 'LlamaTokenizer', 'CodeLlamaTokenizer', 'GemmaTokenizer', 'Phi3Tokenizer']]
+Traceback (most recent call last):
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\convert_slow_tokenizer.py", line 1737, in convert_slow_tokenizer
+    ).converted()
+      ~~~~~~~~~^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\convert_slow_tokenizer.py", line 1631, in converted
+    tokenizer = self.tokenizer()
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\convert_slow_tokenizer.py", line 1624, in tokenizer
+    vocab_scores, merges = self.extract_vocab_merges_from_model(self.vocab_file)
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\convert_slow_tokenizer.py", line 1600, in extract_vocab_merges_from_model
+    bpe_ranks = load_tiktoken_bpe(tiktoken_url)
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\tiktoken\load.py", line 158, in load_tiktoken_bpe
+    contents = read_file_cached(tiktoken_bpe_file, expected_hash)
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\tiktoken\load.py", line 48, in read_file_cached
+    cache_key = hashlib.sha1(blobpath.encode()).hexdigest()
+                             ^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'encode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\disha\OneDrive\Desktop\Python\NLP-Text-Summarizer\main.py", line 30, in <module>
+    data_transformation.main()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\users\disha\onedrive\desktop\python\nlp-text-summarizer\src\textSummarizer\pipeline\stage_03_data_transformation.py", line 13, in main
+    data_transformation = DataTransformation(config=data_transformation_config)
+  File "c:\users\disha\onedrive\desktop\python\nlp-text-summarizer\src\textSummarizer\components\data_transformation.py", line 13, in __init__
+    self.tokenizer = AutoTokenizer.from_pretrained(config.tokenizer_name)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\models\auto\tokenization_auto.py", line 1135, in from_pretrained
+    return tokenizer_class_fast.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\tokenization_utils_base.py", line 2069, in from_pretrained
+    return cls._from_pretrained(
+           ~~~~~~~~~~~~~~~~~~~~^
+        resolved_vocab_files,
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\tokenization_utils_base.py", line 2315, in _from_pretrained
+    tokenizer = cls(*init_inputs, **init_kwargs)
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\models\pegasus\tokenization_pegasus_fast.py", line 136, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        vocab_file,
+        ^^^^^^^^^^^
+    ...<9 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\tokenization_utils_fast.py", line 139, in __init__
+    fast_tokenizer = convert_slow_tokenizer(self, from_tiktoken=True)
+  File "C:\Users\disha\Anaconda3\envs\textS\Lib\site-packages\transformers\convert_slow_tokenizer.py", line 1739, in convert_slow_tokenizer
+    raise ValueError(
+    ...<3 lines>...
+    )
+ValueError: Converting from SentencePiece and Tiktoken failed, if a converter for SentencePiece is available, provide a model path with a SentencePiece tokenizer.model file.Currently available slow->fast converters: ['AlbertTokenizer', 'BartTokenizer', 'BarthezTokenizer', 'BertTokenizer', 'BigBirdTokenizer', 'BlenderbotTokenizer', 'CamembertTokenizer', 'CLIPTokenizer', 'CodeGenTokenizer', 'ConvBertTokenizer', 'DebertaTokenizer', 'DebertaV2Tokenizer', 'DistilBertTokenizer', 'DPRReaderTokenizer', 'DPRQuestionEncoderTokenizer', 'DPRContextEncoderTokenizer', 'ElectraTokenizer', 'FNetTokenizer', 'FunnelTokenizer', 'GPT2Tokenizer', 'HerbertTokenizer', 'LayoutLMTokenizer', 'LayoutLMv2Tokenizer', 'LayoutLMv3Tokenizer', 'LayoutXLMTokenizer', 'LongformerTokenizer', 'LEDTokenizer', 'LxmertTokenizer', 'MarkupLMTokenizer', 'MBartTokenizer', 'MBart50Tokenizer', 'MPNetTokenizer', 'MobileBertTokenizer', 'MvpTokenizer', 'NllbTokenizer', 'OpenAIGPTTokenizer', 'PegasusTokenizer', 'Qwen2Tokenizer', 'RealmTokenizer', 'ReformerTokenizer', 'RemBertTokenizer', 'RetriBertTokenizer', 'RobertaTokenizer', 'RoFormerTokenizer', 'SeamlessM4TTokenizer', 'SqueezeBertTokenizer', 'T5Tokenizer', 'UdopTokenizer', 'WhisperTokenizer', 'XLMRobertaTokenizer', 'XLNetTokenizer', 'SplinterTokenizer', 'XGLMTokenizer', 'LlamaTokenizer', 'CodeLlamaTokenizer', 'GemmaTokenizer', 'Phi3Tokenizer']
+[2025-08-24 20:27:04,653: INFO: main: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-08-24 20:27:04,657: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 20:27:04,660: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 20:27:04,660: INFO: common: created directory at: artifacts]
+[2025-08-24 20:27:04,661: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-24 20:27:04,661: INFO: data_ingestion: File already exists of size: ~ 7718 KB]
+[2025-08-24 20:27:04,812: INFO: main: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-08-24 20:27:04,813: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-08-24 20:27:04,816: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 20:27:04,818: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 20:27:04,818: INFO: common: created directory at: artifacts]
+[2025-08-24 20:27:04,819: INFO: common: created directory at: artifacts/data_validation]
+[2025-08-24 20:27:04,822: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-08-24 20:27:04,822: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-08-24 20:27:04,825: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-24 20:27:04,827: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-24 20:27:04,827: INFO: common: created directory at: artifacts]
+[2025-08-24 20:27:04,828: INFO: common: created directory at: artifacts/data_transformation]
+[2025-08-24 20:27:18,468: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
